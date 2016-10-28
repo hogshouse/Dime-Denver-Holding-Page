@@ -1,0 +1,31 @@
+/*********************
+Media Queries
+*********************/
+
+$lupo: 480px;
+$polo: 781px;
+$passat: 1030px;
+
+@mixin respond-to($media) {
+
+  @if $media == lupo {
+    @media only screen and (max-width: $lupo) { @content; }
+  }
+
+  @else if $media == polo {
+    @media only screen and (min-width: $lupo + 1 ) { @content; }
+  }
+
+  @else if $media == passat {
+    @media only screen and (min-width: $passat) { @content; }
+  }
+
+}
+
+// .profile-pic {
+//   float: left;
+//   width: 250px;
+//   @include respond-to(mobile) { width: 100% ;}
+//   @include respond-to(tablet) { width: 125px; }
+//   @include respond-to(desktop) { float: none; }
+// }

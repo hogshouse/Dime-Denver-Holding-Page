@@ -3,9 +3,86 @@
   <head>
     <meta charset="utf-8">
     <title>DIME Denver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="build/css/main.css" />
+    <script src="build/js/libs/jquery-3.1.1.min.js" type="text/javascript" ></script>
+    <script src="build/js/libs/jquery.countdown.min.js" type="text/javascript" ></script>
+    <script src="build/js/main.js" type="text/javascript" ></script>
   </head>
   <body>
-    <h1>Hello</h1>
+    <header>
+      <div class="header-container">
+        <img class="logo" src="/build/img/dime-denver-logo.png" alt="" />
+      </div>
+    </header>
+    <div class="main">
+      <div class="main-container">
+        <div class="hero-video-container">
+          <iframe class="hero-video" src="https://www.youtube.com/embed/nct-uo0_Xh0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <h1 class="headline">
+          MUSIC EDUCATION IS A FOUR LETTER WORD
+        </h1>
+
+        <div class="count-down">
+          <h3 class="clock-header">POP-UP SPACE OPENS IN:</h3>
+          <div id="clock"></div>
+
+
+
+<span class="date"></span>
+
+          <script type="text/javascript">
+          $('#clock').countdown('2016/11/15').on('update.countdown', function(event) {
+          var $this = $(this).html(event.strftime(''
+            + '<span class="date">%-w <br> <span class="date-inticator">week%!w</span></span> '
+            + '<span class="date">%-d <br> <span class="date-inticator">day%!d</span></span> '
+            + '<span class="date">%H <br> <span class="date-inticator">hours</span></span> '
+            + '<span class="date">%M <br> <span class="date-inticator">mins</span></span> '
+            + '<span class="date">%S <br> <span class="date-inticator">secs</span></span> '));
+          });
+          </script>
+
+        </div>
+
+        <div class="main-copy">
+          <p class="highlight">
+            In celebration of its permanent location opening next fall, new music institute DIME Denver is launching a pop-up space November 15th. The space will be open to the public for special performances and presentations by DIME (Detroit Institute of Music Education). and the space will host live music shows and master classes with key music industry insiders in the near future.
+          </p>
+
+          <p class="highlight">
+            Prospective students can learn more about the MSU Denver at DIME Bachelor of Arts in Individualised Studies Degrees in Commercial Music Performance, Commercial Songwriting and Music Industry Studies, and applications will be accepted on-site.
+          </p>
+
+          <p>
+            DIME Denver's permanent space will be located at Fifth Street and Walnut for classes beginning Fall 2017.
+          </p>
+        </div>
+
+        <div class="map-wrap">
+
+          <div class="map-text">
+            <p>
+              DIME Denver Pop-up space located inside the Tivoli Student Union, Room 140 at: 900 Auraria Pkwy, Denver, CO 80204
+            </p>
+          </div>
+
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.7512446043984!2d-105.0079832846244!3d39.74523827944874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78c8863eaf15%3A0x47b188a00d2cccda!2sTivoli%2C+900+Auraria+Pkwy%2C+Denver%2C+CO+80204%2C+USA!5e0!3m2!1sen!2suk!4v1477672389362" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+        </div>
+
+      </div>
+
+      <footer>
+        <img class="footer-logo-img" src="build/img/footer-logos.png" alt="" />
+        <p class="copy-text">
+          &copy; Copyright 2016 - DIME
+        </p>
+      </footer>
+
+    </div>
   </body>
 </html>
