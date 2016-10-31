@@ -11,7 +11,8 @@
 
 body {
   background: #010001;
-  font-family: 'clarendon-boldregular';
+  font-family: 'clarendon-condensed';
+  letter-spacing: 0.1em;
   color: #fff;
   @include respond-to(polo) {
       text-align: justify;
@@ -33,12 +34,42 @@ header {
 .header-container {
   max-width: $container-width;
   padding: $contianer-padding;
+  // background: red;
   margin: auto;
+  position: relative;
   img.logo {
     width: 100%;
     display: block;
     @include respond-to(polo) {
       width: 350px !important;
+    }
+  }
+}
+
+// SOCIAL NAV
+ul.header-social-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  margin-top: 7px;
+
+  right: 20px;
+  display: none;
+    @include respond-to(polo) {
+      display: block;
+    }
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+    a {
+      display: block;
+      float: left;
+      font-size: 31px;
+      color: #BE4555;
+      &:hover {
+        color: lighten(#BE4555, 10%)
+      }
     }
   }
 }
@@ -81,9 +112,12 @@ header {
 // HEADLINE
 .headline {
   color: #fff;
-  font-size: 31px;
+  font-size: 34px;
   text-align: center;
-  margin: 2.5em 0 1.5em 0;
+  margin: 0.5em 0 0.8em 0;
+    @include respond-to(polo) {
+      font-size: 51px;
+    }
 }
 
 // COUNT DOWN
@@ -93,6 +127,9 @@ h3.clock-header{
   font-size: 24px;
   margin-top: 0px;
   margin-bottom: 15px;
+    @include respond-to(polo) {
+      font-size: 38px;
+    }
 }
 
 .count-down {
@@ -109,6 +146,9 @@ h3.clock-header{
     float: left;
     text-align: center;
     font-size: 21px;
+      @include respond-to(polo) {
+        font-size: 31px;
+      }
   }
   span.date-inticator {
     color: #B7495C;
@@ -182,5 +222,32 @@ img.footer-logo-img {
 }
 
 p.copy-text {
-  font-size: 12px;
+  font-size: 16px;
+}
+
+.footer-social-nav-container {
+  width: 100%;
+  background: #18191A;
+  margin-bottom: 1em;
+  // background: red;
+  @include respond-to(polo) {
+    display: none;
+  }
+}
+
+ul.footer-social-nav {
+  width: 250px;
+  margin: auto;
+  text-align: center;
+  li {
+    list-style: none;
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      font-size: 31px;
+      color: #fff;
+      margin: 0 10px;
+    }
+  }
 }
