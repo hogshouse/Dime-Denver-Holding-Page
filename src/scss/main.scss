@@ -47,7 +47,7 @@ header {
   margin-top: 70px;
   background: url('../img/background.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: top center;
 }
 .main-container {
@@ -59,7 +59,7 @@ header {
 // VIDEO
 .hero-video-container {
   position: relative;
-	padding-bottom: 52.25%; /* 16:9 */
+	padding-bottom: 52.85%; /* 16:9 */
 	padding-top: 25px;
 	height: 0 !important;
   padding-top: 30px;
